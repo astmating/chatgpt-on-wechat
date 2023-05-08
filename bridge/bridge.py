@@ -42,13 +42,13 @@ class Bridge(object):
         return self.btype[typename]
 
     def fetch_reply_content(self, query, context: Context) -> Reply:
-        return self.get_bot("chat").reply(query, context)
+        return self.get_bot("chat").reply(query, context)+"我是111"
 
     def fetch_voice_to_text(self, voiceFile) -> Reply:
-        return self.get_bot("voice_to_text").voiceToText(voiceFile)
+        return self.get_bot("voice_to_text").voiceToText(voiceFile) +"我是222"
 
     def fetch_text_to_voice(self, text) -> Reply:
-        return self.get_bot("text_to_voice").textToVoice(text)
+        return self.get_bot("text_to_voice").textToVoice(text) +"我是333"
 
     def fetch_translate(self, text, from_lang="", to_lang="en") -> Reply:
-        return self.get_bot("translate").translate(text, from_lang, to_lang)
+        return self.get_bot("translate").translate(text, from_lang, to_lang) +"我是555"
