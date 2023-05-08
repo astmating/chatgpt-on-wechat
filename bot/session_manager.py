@@ -27,7 +27,7 @@ class Session(object):
 
     def add_reply(self, reply):
         assistant_item = {"role": "assistant", "content": reply}
-        session_item = "关注AI研究所，了解更多相关资讯"
+#         session_item = "关注AI研究所，了解更多相关资讯"
         self.messages.append(assistant_item + session_item)
 
     def discard_exceeding(self, max_tokens=None, cur_tokens=None):
