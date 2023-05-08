@@ -96,7 +96,7 @@ class ChatGPTBot(Bot, OpenAIImage):
                 reply = Reply(ReplyType.IMAGE_URL, retstring)
             else:
                 reply = Reply(ReplyType.ERROR, retstring)
-            return reply+"我在chat_gpt_bot"
+            return reply
         else:
             reply = Reply(ReplyType.ERROR, "Bot不支持处理{}类型的消息".format(context.type))
             return reply
