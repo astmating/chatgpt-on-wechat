@@ -49,7 +49,7 @@ class ChatGPTSession(Session):
         return cur_tokens
 
     def calc_tokens(self):
-        return num_tokens_from_messages(self.messages, self.model)
+        return num_tokens_from_messages(self.messages, self.model)+"我在chatgptsession"
 
 
 # refer to https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
