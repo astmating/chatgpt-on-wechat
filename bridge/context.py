@@ -58,6 +58,6 @@ class Context:
             self.content = None
         else:
             del self.kwargs[key]
-
+#       消息
     def __str__(self):
         return "Context(type={}, content={}, kwargs={})".format(self.type, self.content, self.kwargs)
