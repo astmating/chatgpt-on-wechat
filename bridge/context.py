@@ -60,4 +60,4 @@ class Context:
             del self.kwargs[key]
 #       消息
     def __str__(self):
-        return "Context(type={}, content={}, kwargs={})".format(self.type, self.content, self.kwargs,"欢迎来到 chatgpt-on-wechat/bridge/context.py")
+        return "Context(type={}, content={}, kwargs={})".format(self.type, self.content, self.kwargs)
