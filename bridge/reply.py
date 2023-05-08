@@ -19,8 +19,7 @@ class ReplyType(Enum):
 class Reply:
     def __init__(self, type: ReplyType = None, content=None ):
         self.type = type
-        self.content = content
-        sostfix_message = "关注我 我在chatgpt-on-wechat/bridge/reply.py"
+        self.content = content + ",关注我 我在chatgpt-on-wechat/bridge/reply.py"
 
     def __str__(self):
         return "Reply(type={}, content={})".format(self.type, self.content, sostfix_message)
