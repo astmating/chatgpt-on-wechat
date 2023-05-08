@@ -13,7 +13,7 @@ class ReplyType(Enum):
     ERROR = 10
 
     def __str__(self):
-        return self.name
+        return self.name+"范平哈皮"
 
 
 class Reply:
