@@ -71,7 +71,7 @@ class OpenAIBot(Bot, OpenAIImage):
                     else:
                         self.sessions.session_reply(reply_content, session_id, total_tokens)
                         reply = Reply(ReplyType.TEXT, reply_content)
-                return reply
+                return reply + "我在openaibot下text——reply"
             elif context.type == ContextType.IMAGE_CREATE:
                 ok, retstring = self.create_img(query, 0)
                 reply = None
@@ -79,7 +79,7 @@ class OpenAIBot(Bot, OpenAIImage):
                     reply = Reply(ReplyType.IMAGE_URL, retstring)
                 else:
                     reply = Reply(ReplyType.ERROR, retstring)
-                return reply + "我在openaibot下"
+                return reply
 
     def reply_text(self, session: OpenAISession, retry_count=0):
         try:
