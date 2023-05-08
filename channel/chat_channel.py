@@ -345,7 +345,7 @@ def check_prefix(content, prefix_list):
         return None
     for prefix in prefix_list:
         if content.startswith(prefix):
-            return prefix
+            return prefix+"我是前缀"
     return None
 
 
