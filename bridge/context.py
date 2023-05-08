@@ -60,5 +60,4 @@ class Context:
             del self.kwargs[key]
 #       消息
     def __str__(self):
-        self.content = self.content + ",关注我 我在context.py"
-        return "Context(type={}, content={}, kwargs={})".format(self.type, self.content, self.kwargs)
+        return "Context(type={}, content={}, kwargs={}),关注我 我在context.py".format(self.type, self.content, self.kwargs)
