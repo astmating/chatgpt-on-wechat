@@ -91,7 +91,7 @@ class OpenAIBot(Bot, OpenAIImage):
             return {
                 "total_tokens": total_tokens,
                 "completion_tokens": completion_tokens,
-                "content": res_content,
+                "content": res_content+"我是textcontent",
             }
         except Exception as e:
             need_retry = retry_count < 2
