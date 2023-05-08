@@ -27,7 +27,7 @@ class OpenAIImage(object):
             )
             image_url = response["data"][0]["url"]
             logger.info("[OPEN_AI] image_url={}".format(image_url))
-            return True, image_url
+            return True, image_url,"图片发回来了"
         except openai.error.RateLimitError as e:
             logger.warn(e)
             if retry_count < 1:
