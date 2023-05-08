@@ -79,7 +79,7 @@ class OpenAIBot(Bot, OpenAIImage):
                     reply = Reply(ReplyType.IMAGE_URL, retstring)
                 else:
                     reply = Reply(ReplyType.ERROR, retstring)
-                return reply
+                return reply + "我在openaibot下"
 
     def reply_text(self, session: OpenAISession, retry_count=0):
         try:
