@@ -26,7 +26,7 @@ class OpenAISession(Session):
 
         if len(self.messages) > 0 and self.messages[-1]["role"] == "user":
             prompt += "A: "
-        return prompt
+        return prompt+"prompt 这里"
 
     def discard_exceeding(self, max_tokens, cur_tokens=None):
         precise = True
