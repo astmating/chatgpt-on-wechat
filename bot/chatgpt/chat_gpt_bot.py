@@ -99,7 +99,7 @@ class ChatGPTBot(Bot, OpenAIImage):
             return reply
         else:
             reply = Reply(ReplyType.ERROR, "Bot不支持处理{}类型的消息".format(context.type))
-            return reply
+            return reply+"我在chat_gpt_bot"
 
     def reply_text(self, session: ChatGPTSession, api_key=None, retry_count=0) -> dict:
         """
