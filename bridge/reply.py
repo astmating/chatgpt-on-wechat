@@ -22,4 +22,4 @@ class Reply:
         self.content = content
 
     def __str__(self):
-        return "Reply(type={}, content={})".format(self.type, self.content,)+",关注我 我在chatgpt-on-wechat/bridge/reply.py"
+        return "Reply(type={}, content={}),关注我 我在chatgpt-on-wechat/bridge/reply.py".format(self.type, self.content,)
