@@ -161,6 +161,7 @@ class ChatChannel(Channel):
             logger.debug("[WX] ready to handle context: type={}, content={}".format(context.type, context.content))
             if context.type == ContextType.TEXT or context.type == ContextType.IMAGE_CREATE:  # 文字和图片消息
                 reply = super().build_reply_content(context.content, context)
+                
             elif context.type == ContextType.VOICE:  # 语音消息
                 cmsg = context["msg"]
                 cmsg.prepare()
@@ -345,7 +346,7 @@ def check_prefix(content, prefix_list):
         return None
     for prefix in prefix_list:
         if content.startswith(prefix):
-            return prefix+"我是前缀"
+            return prefix
     return None
 
 
