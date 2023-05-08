@@ -30,7 +30,7 @@ class OpenAIBot(Bot, OpenAIImage):
 
         self.sessions = SessionManager(OpenAISession, model=conf().get("model") or "text-davinci-003")
         self.args = {
-            "model": conf().get("model") or "text-davinci-003",  # 对话模型的名称
+            "model": conf().get("model") or "text-davinci-3.5",  # 对话模型的名称
             "temperature": conf().get("temperature", 0.9),  # 值在[0,1]之间，越大表示回复越具有不确定性
             "max_tokens": 1200,  # 回复最大的字符数
             "top_p": 1,
