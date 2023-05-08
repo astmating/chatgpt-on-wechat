@@ -82,7 +82,7 @@ class SessionManager(object):
             logger.debug("raw total_tokens={}, savesession tokens={}".format(total_tokens, tokens_cnt))
         except Exception as e:
             logger.debug("Exception when counting tokens precisely for session: {}".format(str(e)))
-        return session
+        return session+"我在sessionmanager"
 
     def clear_session(self, session_id):
         if session_id in self.sessions:
