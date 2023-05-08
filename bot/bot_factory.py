@@ -26,7 +26,7 @@ def create_bot(bot_type):
         # OpenAI 官方对话模型API
         from bot.openai.open_ai_bot import OpenAIBot
 
-        return OpenAIBot()
+        return OpenAIBot()+"会话了绘画了"
 
     elif bot_type == const.CHATGPTONAZURE:
         # Azure chatgpt service https://azure.microsoft.com/en-in/products/cognitive-services/openai-service/
